@@ -43,4 +43,7 @@
 - (void)setActionElement:(id)renderer {}
 - (void)setBadgeRenderer:(id)renderer {}
 - (void)setMultiFormatLinkElementRenderer:(id)renderer {}
+- (void)setFeaturedVideoButtonRenderer:(id)arg {}
+- (void)setCTAButtonElementRenderer:(id)arg {}
+- (void)setBadgeElementRenderer:(id)arg {}
 %end
