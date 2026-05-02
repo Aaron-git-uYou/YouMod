@@ -347,21 +347,25 @@ static NSString *GetCacheSize() { // YTLite - @dayanch96
                     [YTSettingsSectionItemClass checkmarkItemWithTitle:LOC(@"HOME_NAME") titleDescription:nil selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
                         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:DefaultTab];
                         [settingsViewController reloadData];
+                        [self updateYouModSectionWithEntry:nil];
                         return YES;
                     }],
                     [YTSettingsSectionItemClass checkmarkItemWithTitle:LOC(@"Shorts") titleDescription:nil selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
                         [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:DefaultTab];
                         [settingsViewController reloadData];
+                        [self updateYouModSectionWithEntry:nil];
                         return YES;
                     }],
                     [YTSettingsSectionItemClass checkmarkItemWithTitle:LOC(@"SUBSCRIPT_NAME") titleDescription:nil selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
                         [[NSUserDefaults standardUserDefaults] setInteger:2 forKey:DefaultTab];
                         [settingsViewController reloadData];
+                        [self updateYouModSectionWithEntry:nil];
                         return YES;
                     }],
                     [YTSettingsSectionItemClass checkmarkItemWithTitle:LOC(@"LIB_NAME") titleDescription:nil selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
                         [[NSUserDefaults standardUserDefaults] setInteger:3 forKey:DefaultTab];
                         [settingsViewController reloadData];
+                        [self updateYouModSectionWithEntry:nil];
                         return YES;
                     }]
                 ];
