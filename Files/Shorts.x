@@ -34,3 +34,13 @@
 %hook YTHotConfig
 - (BOOL)enablePlayerBarForVerticalVideoWhenControlsHiddenInFullscreen { return IS_ENABLED(ShowShortsSeekbar) ? YES : %orig; }
 %end
+
+%hook YTReelWatchHeaderView
+// - (void)setChannelBarElementRenderer:(id)renderer { if (!ytlBool(@"hideShortsChannelName")) %orig; }
+// - (void)setHeaderRenderer:(id)renderer { if (!ytlBool(@"hideShortsDescription")) %orig; }
+// - (void)setShortsVideoTitleElementRenderer:(id)renderer { if (!ytlBool(@"hideShortsDescription")) %orig; }
+- (void)setSoundMetadataElementRenderer:(id)renderer {}
+- (void)setActionElement:(id)renderer {}
+- (void)setBadgeRenderer:(id)renderer {}
+- (void)setMultiFormatLinkElementRenderer:(id)renderer {}
+%end
