@@ -260,8 +260,6 @@
     [watchController showFullScreen];
 }
 
-%end
-
 /*
 %new
 - (void)shortsToRegular {
