@@ -178,6 +178,8 @@ typedef NS_ENUM(NSUInteger, GestureSection) {
 @property (nonatomic, retain) UIPanGestureRecognizer *YouModPanGesture;
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
 - (void)YouModAutoFullscreen;
+- (void)turnOffCaptions;
+- (void)setActiveCaptionTrack:(id)arg1 source:(NSUInteger)arg2;
 @end
 
 @interface SSOConfiguration : NSObject

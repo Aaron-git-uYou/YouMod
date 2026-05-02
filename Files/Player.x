@@ -244,14 +244,14 @@
     %orig;
     if (IS_ENABLED(AutoFullScreen)) [self performSelector:@selector(YouModAutoFullscreen) withObject:nil afterDelay:0.75];
     // if (ytlBool(@"shortsToRegular")) [self performSelector:@selector(shortsToRegular) withObject:nil afterDelay:0.75];
-    // if (ytlBool(@"disableAutoCaptions")) [self performSelector:@selector(turnOffCaptions) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(turnOffCaptions) withObject:nil afterDelay:1.0];
 }
 
 - (void)prepareToLoadWithPlayerTransition:(id)arg1 expectedLayout:(id)arg2 {
     %orig;
     if (IS_ENABLED(AutoFullScreen)) [self performSelector:@selector(YouModAutoFullscreen) withObject:nil afterDelay:0.75];
     // if (ytlBool(@"shortsToRegular")) [self performSelector:@selector(shortsToRegular) withObject:nil afterDelay:0.75];
-    // if (ytlBool(@"disableAutoCaptions")) [self performSelector:@selector(turnOffCaptions) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(turnOffCaptions) withObject:nil afterDelay:1.0];
 }
 
 %new
@@ -272,15 +272,17 @@
         }
     }
 }
+*/
 
 %new
 - (void)turnOffCaptions {
     if ([self.view.superview isKindOfClass:NSClassFromString(@"YTWatchView")]) {
-        [self setActiveCaptionTrack:nil]; // will try this - got removed
+        [self setActiveCaptionTrack:nil source:0];
     }
 }
 %end
 
+/*
 // Fix Playlist Mini-bar Height For Small Screens
 %hook YTPlaylistMiniBarView
 - (void)setFrame:(CGRect)frame {
