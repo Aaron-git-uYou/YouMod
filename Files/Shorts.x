@@ -39,11 +39,11 @@
 // - (void)setChannelBarElementRenderer:(id)renderer { if (!ytlBool(@"hideShortsChannelName")) %orig; }
 // - (void)setHeaderRenderer:(id)renderer { if (!ytlBool(@"hideShortsDescription")) %orig; }
 // - (void)setShortsVideoTitleElementRenderer:(id)renderer { if (!ytlBool(@"hideShortsDescription")) %orig; }
-- (void)setSoundMetadataElementRenderer:(id)renderer {}
-- (void)setActionElement:(id)renderer {}
-- (void)setBadgeRenderer:(id)renderer {}
-- (void)setMultiFormatLinkElementRenderer:(id)renderer {}
-- (void)setFeaturedVideoButtonRenderer:(id)arg {}
-- (void)setCTAButtonElementRenderer:(id)arg {}
-- (void)setBadgeElementRenderer:(id)arg {}
+- (void)setSoundMetadataElementRenderer:(id)renderer { %orig(nil); }
+- (void)setActionElement:(id)renderer { %orig(nil); } 
+- (void)setBadgeRenderer:(id)renderer { %orig(nil); } 
+- (void)setMultiFormatLinkElementRenderer:(id)renderer { %orig(nil); }
+- (void)setFeaturedVideoButtonRenderer:(id)arg { %orig(nil); }
+- (void)setCTAButtonElementRenderer:(id)arg { %orig(nil); }
+- (void)setBadgeElementRenderer:(id)arg { %orig(nil); }
 %end
