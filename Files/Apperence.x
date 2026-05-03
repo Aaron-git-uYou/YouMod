@@ -99,3 +99,7 @@ static BOOL isDarkMode(UIView *view) {
     return [UIColor blackColor];
 }
 %end
+
+%hook YTMainAppVideoPlayerOverlayViewController
+- (id)playerOverlayVideoZoomController { return nil; }
+%end
