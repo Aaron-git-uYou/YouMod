@@ -81,3 +81,21 @@ static BOOL isDarkMode(UIView *view) {
     return self.pageStyle == 1 ? [UIColor blackColor] : %orig;
 }
 %end
+
+%hook YTColor
++ (UIColor *)black0 {
+    return [UIColor blackColor];
+}
++ (UIColor *)black1 {
+    return [UIColor blackColor];
+}
++ (UIColor *)black2 {
+    return [UIColor blackColor];
+}
++ (UIColor *)black3 {
+    return [UIColor blackColor];
+}
++ (UIColor *)black4 {
+    return [UIColor blackColor];
+}
+%end
