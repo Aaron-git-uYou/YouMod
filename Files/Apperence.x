@@ -1,4 +1,5 @@
 #import "Headers.h"
+#import <YouTubeHeader/YTCommonColorPalette.h>
 
 // OLEDKeyboard (https://github.com/dayanch96/OledKeyboard)
 static BOOL isDarkMode(UIView *view) {
